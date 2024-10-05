@@ -23,14 +23,8 @@ def dfs(x, y, cnt, value):
 
         if 0 <= nx < N and 0 <= ny < M and not visited[nx][ny]:
             visited[nx][ny] = True
-            value += graph[nx][ny]
-            cnt += 1
-
-            dfs(nx, ny, cnt, value)
-
+            dfs(nx, ny, cnt + 1, value + graph[nx][ny])
             visited[nx][ny] = False
-            value -= graph[nx][ny]
-            cnt -= 1
 
 # ㅏ, ㅓ, ㅗ, ㅜ 모양 탐색 함수 (dfs로는 탐색 불가)
 # 탐색 방법
@@ -53,7 +47,6 @@ def find_t(x, y):
     # 사방이 모두 탐색 불가능한 경우(3방향만), 값들을 모두 더해준다.
     elif len(arr) == 3:
         max_value = max(max_value, sum(arr) + graph[x][y])
-    return
 
 for i in range(N):
     for j in range(M):
