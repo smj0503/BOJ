@@ -1,5 +1,6 @@
 # BOJ 14503 '로봇 청소기'
 # point : -1 % 4 = 3
+
 from collections import deque
 import sys
 input = sys.stdin.readline
