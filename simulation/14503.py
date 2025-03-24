@@ -44,7 +44,7 @@ def solution(x, y, z):
             nx = x + dx[i]
             ny = y + dy[i]
 
-            if 0 <= nx < N and 0 <= ny < M and room[nx][ny] == 0:
+            if room[nx][ny] == 0:
                 tmp += 1
 
         # 청소 되지 않은 빈 칸이 하나도 없다면,
