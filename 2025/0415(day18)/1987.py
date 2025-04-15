@@ -20,11 +20,12 @@ def dfs(x, y, cnt):
     for i in range(4):
         nx, ny = x + dx[i], y + dy[i]
 
-        if 0 <= nx < r and 0 <= ny < c and not visited[ord(board[nx][ny]) - 65]:
-            visited[ord(board[nx][ny]) - 65] = 1
-            dfs(nx, ny, cnt + 1)
-            visited[ord(board[nx][ny]) - 65] = 0
-    return
+        if 0 <= nx < r and 0 <= ny < c:
+            next_alp = ord(board[nx][ny]) - 65
+            if not visited[next_alp]:
+                visited[next_alp] = 1
+                dfs(nx, ny, cnt + 1)
+                visited[next_alp] = 0
 
 dfs(0, 0, 1)
 print(ans)
