@@ -1,21 +1,19 @@
-# BOJ 1753 '최단경로'
+# BOJ 1753
 
 import heapq
 import sys
 input = sys.stdin.readline
+INF = int(1e9)
 
 v, e = map(int, input().split())
 k = int(input())
-INF = int(1e9)
 
-# 그래프 초기화
 graph = [[] for _ in range(v+1)]
 distance = [INF] * (v+1)
 
-# 간선 정보 입력
 for _ in range(e):
-    a, b, c = map(int, input().split())
-    graph[a].append((b, c))
+    x, y, w = map(int, input().split())
+    graph[x].append((y, w))
 
 def dijkstra(start):
     q = []
