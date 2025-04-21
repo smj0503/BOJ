@@ -6,11 +6,6 @@ input = sys.stdin.readline
 n, m = map(int, input().split())
 parent = [-1] * (n+1)
 
-# def find(x):
-#     while parent[x] > 0:
-#         x = parent[x]
-#     return x
-
 # 최적화 코드
 def find(x):
     if parent[x] < 0:
