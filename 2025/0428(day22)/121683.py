@@ -1,4 +1,4 @@
-# PROGRAMMERS 15008 '외톨이 알파벳'
+# PROGRAMMERS 121683 '외톨이 알파벳'
 
 input_string = input()
 answer = []
